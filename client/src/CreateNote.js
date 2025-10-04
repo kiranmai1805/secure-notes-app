@@ -18,7 +18,8 @@ function CreateNote() {
     setLoading(true);
     setLink('');
     try {
-      const response = await axios.post('/api/notes', { content });
+      const API_URL = process.env.REACT_APP_API_URL;
+      const response = await axios.post(`${API_URL}/api/notes`, { content });
       const { id } = response.data;
       const newLink = `${window.location.origin}/note/${id}`;
       setLink(newLink);

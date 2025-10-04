@@ -10,7 +10,8 @@ function ViewNote() {
 
   useEffect(() => {
     if (id) {
-      axios.get(`/api/notes/${id}`)
+      const API_URL = process.env.REACT_APP_API_URL;
+      axios.get(`${API_URL}/api/notes/${id}`)
         .then(response => {
           setNote(response.data.content);
           setLoading(false);
