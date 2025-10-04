@@ -6,8 +6,12 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
-// Middleware
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://secure-notes-app-olive.vercel.app',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // MongoDB Connection
