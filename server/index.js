@@ -8,7 +8,7 @@ const PORT = 5000;
 
 
 const corsOptions = {
-  origin: 'https://secure-notes-app-olive.vercel.app',
+  origin: 'https://secure-notes-kyr0c3ytu-kiranmai1805s-projects.vercel.app',
   optionsSuccessStatus: 200
 };
 console.log('SERVER CORS OPTIONS:', corsOptions);
