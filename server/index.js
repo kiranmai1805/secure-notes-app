@@ -11,6 +11,7 @@ const corsOptions = {
   origin: 'https://secure-notes-app-olive.vercel.app',
   optionsSuccessStatus: 200
 };
+console.log('SERVER CORS OPTIONS:', corsOptions);
 app.use(cors(corsOptions));
 app.use(express.json());
 
