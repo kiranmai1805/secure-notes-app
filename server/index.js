@@ -27,6 +27,13 @@ const noteSchema = new mongoose.Schema({
 });
 const Note = mongoose.model('Note', noteSchema);
 
+app.get('/api/test', (req, res) => {
+  res.send('GET test route is working!');
+});
+app.post('/api/test', (req, res) => {
+  res.send('POST test route is working!');
+});
+
 // API Route to CREATE a new note
 app.post('/api/notes', async (req, res) => {
   try {
